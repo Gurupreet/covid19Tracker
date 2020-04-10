@@ -15,13 +15,12 @@ import com.guru.covid19tracker.models.Info
 import com.guru.covid19tracker.utils.CardType
 import kotlinx.android.synthetic.main.fragment_info.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class InfoFragment : Fragment(), InfoListAdapter.OnListItemTapped{
+
     lateinit var infoListAdapter: InfoListAdapter
     lateinit var infoCardsAdapter: InfoCardsAdapter
     lateinit var symptomsCardsAdapter: InfoCardsAdapter
+
     val list = arrayListOf<Info>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +37,7 @@ class InfoFragment : Fragment(), InfoListAdapter.OnListItemTapped{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
-        setupCardsData()
+        setupCardsPrecautionData()
         setupCardsDataSymptoms()
         loadInfo()
     }
@@ -72,7 +71,7 @@ class InfoFragment : Fragment(), InfoListAdapter.OnListItemTapped{
         })
     }
 
-    private fun setupCardsData() {
+    private fun setupCardsPrecautionData() {
         val card1 = Info("1/6: Wash Hands", "Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.")
         val card2 = Info("2/6: Social Distancing", "When someone coughs or sneezes they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person coughing has the disease.")
         val card3 = Info("3/6: Avoid touching eyes, nose and mouth", "Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and can make you sick.")

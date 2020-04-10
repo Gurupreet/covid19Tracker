@@ -10,6 +10,7 @@ import com.guru.covid19tracker.ui.datalist.DataListFragment
 import com.guru.covid19tracker.ui.info.InfoFragment
 import com.guru.covid19tracker.ui.news.NewsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.guru.covid19tracker.data.firebase.FirebaseManager
 import com.guru.covid19tracker.utils.Naviation
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        FirebaseManager.initInsanceID()
         handler = Handler()
         bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         loadFragment(TAG)

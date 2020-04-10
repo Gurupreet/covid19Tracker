@@ -1,11 +1,13 @@
 package com.guru.covid19tracker.data.firebase
 
 import android.util.Log
+import com.google.android.gms.tasks.OnCompleteListener
 import com.guru.covid19tracker.models.Info
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.iid.FirebaseInstanceId
 import java.lang.Exception
 
 object FirebaseManager {
@@ -34,5 +36,18 @@ object FirebaseManager {
                 firestoreResponseCompletionHandler.onSuccess(list, FirebaseObserverType.CHILD_ADDED)
             }
         })
+    }
+
+    fun initInsanceID() {
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("Manager", "getInstanceId failed", task.exception)
+                    return@OnCompleteListener
+                }
+
+                val token = task.result?.token
+
+            })
     }
 }
