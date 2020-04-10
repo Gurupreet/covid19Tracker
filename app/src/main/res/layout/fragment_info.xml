@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.news.NewsFragment">
+    <TextView
+        android:text="Useful Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Covid-19 Protection measures (Source: WHO)"
+        android:textStyle="bold"
+        android:padding="@dimen/padding_medium">
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_info"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Covid-19 Symptoms and Info (Source: WHO)"
+        android:textStyle="bold"
+        android:padding="@dimen/padding_medium">
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_symptoms"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
+    </androidx.core.widget.NestedScrollView>

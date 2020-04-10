@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        android:animateLayoutChanges="true"
+        android:layout_margin="@dimen/margin_medium"
+        android:elevation="@dimen/cardview_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:orientation="vertical">
+            <TextView
+                android:text="India Covid-19 Tracker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_medium"
+                android:gravity="center"
+                android:padding="@dimen/padding_small"
+                android:textStyle="bold"></TextView>
+            <TextView
+                android:id="@+id/updated"
+                android:text="updated: 20 mins ago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_very_small"
+                android:gravity="center"
+                android:textColor="@color/grey"
+                android:textStyle="italic"></TextView>
+            <LinearLayout
+                android:id="@+id/data_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Confirmed"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Active"
+                    android:gravity="center"
+                    android:textColor="@color/orange"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Recovered"
+                    android:textColor="@color/green"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Deaths"
+                    android:textColor="@color/red"
+                    android:layout_height="wrap_content"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/data_layout_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:layout_below="@id/data_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/confirmed"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/active"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/recovered"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/deceased"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/data_layout_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:layout_below="@id/data_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/daily_confirmed"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/daily_active"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/daily_recovered"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/daily_deceased"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/spark_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:layout_below="@id/data_layout"
+                android:orientation="horizontal">
+
+                <com.robinhood.spark.SparkView
+                    android:id="@+id/confirmed_spark"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_small"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_small"
+                    android:layout_height="50dp"></com.robinhood.spark.SparkView>
+
+                <com.robinhood.spark.SparkView
+                    android:id="@+id/active_spark"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_small"
+                    android:layout_height="50dp"></com.robinhood.spark.SparkView>
+
+                <com.robinhood.spark.SparkView
+                    android:id="@+id/recovered_spark"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_small"
+                    android:layout_height="50dp"></com.robinhood.spark.SparkView>
+
+                <com.robinhood.spark.SparkView
+                    android:id="@+id/deceased_spark"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_small"
+                    android:layout_height="50dp"></com.robinhood.spark.SparkView>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_grey"
+                android:layout_margin="@dimen/margin_small"
+                android:layout_below="@+id/data_layout_value"></View>
+            <TextView
+                android:id="@+id/extra"
+                android:text="28 states affected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_very_small"
+                android:textColor="@color/grey"
+                android:padding="@dimen/padding_small"></TextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:text="States"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_medium"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/sort"
+        android:text="Sort by"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:id="@+id/filter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmed"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/sort"
+        android:textStyle="italic"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_very_small"></TextView>
+</RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/error_image"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:src="@drawable/ic_signal_wifi_off_black_24dp"
+            android:layout_height="wrap_content"></ImageView>
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Something went wrong. Please check your Internet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/error_image"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp"></TextView>
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="Retry"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"></Button>
+    </LinearLayout>
+
+</LinearLayout>

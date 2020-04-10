@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.klinkerapps:link_builder:1.5.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c3ae6f19ca33c53ce09816f6c03727c1/jetified-link_builder-1.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c3ae6f19ca33c53ce09816f6c03727c1/jetified-link_builder-1.5.2/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.klinkerapps/link_builder/1.5.2/39ed9a3ab87bae60a069462fcd323d5b4d64b602/link_builder-1.5.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.klinkerapps/link_builder/1.5.2/856ece45ecd8d1eb4969ff043c1b07d16e39dd7/link_builder-1.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/avatar_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:transitionName="avatar"
+        />
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text="username"
+        android:layout_toLeftOf="@+id/message_info"
+        android:layout_toRightOf="@id/avatar_image"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="0dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/username"
+        android:layout_alignLeft="@id/username"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/photo_message"
+        android:layout_width="match_parent"
+        android:layout_below="@id/message_text"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignLeft="@+id/username"
+        android:layout_height="200dp"
+        />
+
+    <TextView
+        android:id="@+id/live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watch Live"
+        android:textSize="@dimen/text_very_small"
+        android:textStyle="bold"
+        android:padding="@dimen/padding_small"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/photo_message"/>
+    <ImageView
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_play_circle_filled_black_24dp"
+        android:layout_alignLeft="@+id/photo_message"
+        android:layout_alignRight="@+id/photo_message"
+        android:layout_alignTop="@+id/photo_message"
+        android:layout_alignBottom="@+id/photo_message"/>
+
+    <LinearLayout
+        android:id="@+id/message_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/username"
+        android:gravity="right"
+        android:layout_marginRight="4dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bullish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:textColor="@color/white"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:textSize="@dimen/text_very_small"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:text="4m"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_very_small"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>

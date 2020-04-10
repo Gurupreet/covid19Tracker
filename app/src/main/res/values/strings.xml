@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Covid19 Tracker</string>
+
+
+    <!-- TIme stamps-->
+    <string name="time_just_now">Just now</string>
+    <string name="time_min_ago">A minute ago</string>
+    <string name="time_mins_ago"> minutes ago</string>
+    <string name="time_hour_ago">An hour ago</string>
+    <string name="time_hours_ago"> hours ago</string>
+    <string name="time_yesterday">Yesterday</string>
+    <string name="time_days_ago"> days ago</string>
+    <string name="time_week_ago"> week ago</string>
+    <string name="time_weeks_ago"> weeks ago</string>
+    <string name="time_month_ago"> month ago</string>
+    <string name="time_months_ago"> months ago</string>
+    <string name="time_year_ago"> year ago</string>
+    <string name="time_years_ago"> years ago</string>
+
+    <string name="time_min"> A minute</string>
+    <string name="time_mins"> minutes</string>
+    <string name="time_hour"> An hour</string>
+    <string name="time_hours"> hours</string>
+    <string name="time_days"> days</string>
+    <string name="time_week"> week</string>
+    <string name="time_weeks"> weeks</string>
+    <string name="time_month"> month</string>
+    <string name="time_months"> months</string>
+    <string name="time_year"> year</string>
+    <string name="time_years"> years</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
