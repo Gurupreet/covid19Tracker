@@ -17,13 +17,13 @@ class FCMService: FirebaseMessagingService() {
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         // Check if message contains a notification payload.
-        remoteMessage.notification?.body?.let {
+        remoteMessage?.notification.let {
             sendNotification(it)
         }
 
     }
 
-    private fun sendNotification(messageBody: String) {
+    private fun sendNotification(notification: RemoteMessage.Notification?) {
         val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
@@ -33,8 +33,8 @@ class FCMService: FirebaseMessagingService() {
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
             .setSmallIcon(R.drawable.ic_info_outline_black_24dp)
-            .setContentTitle("Daily Covid-19 Alert")
-            .setContentText(messageBody)
+            .setContentTitle(notification?.title)
+            .setContentText(notification?.body)
             .setAutoCancel(true)
             .setSound(defaultSoundUri)
             .setContentIntent(pendingIntent)
