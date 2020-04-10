@@ -1,18 +1,16 @@
-# githubTrendingMVVM
+# About
+We are group of volunteers who are concerened for our loved one's like everyone else hence working on this project to provide information and raise awareness about covid-19. Please stay safe and practice social distancing.
 
-### Description
-This project demonstrates latest kotlin first tech stack with MVVM architecture of Android applications.
+# Data Disclaimer: 
+The data is collected and validated by group of volunteers from provided state information and official sources. Our data may be delayed or not exactly matching the official as we are combining them from multiple sources."
+We are also double checking the info of data collected by "Covid19Org" as well. Which is also a state wise confirmed data collection from multiple sources.
 
-1. [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - For offloading long running tasks to background
+# Get Latest Release:
 
-2. [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - For Interacting between UI and viewmodels.
+# Contribute:
+1: You can contribute by adding more functionality to app you think will help people.
 
-3. [Koin](https://github.com/InsertKoinIO/koin) - For dependency injection
+2: You can contribute in "Proof-Read" the info provided as well as add New Info cards. You must add source of info and should
+be a valid verified entity.
 
-4. [Room](https://developer.android.com/training/data-storage/room) - For storing our application data and presistence 
-
-5. [Retrofit](https://github.com/square/retrofit) - For making API calls
-
-
-![image](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
-
+3: You can contribute to data collection of cases and provide insights on other sources of data collection.
