@@ -13,6 +13,7 @@ import com.guru.covid19tracker.data.firebase.FirestoreResponseCompletionHandler
 import com.guru.covid19tracker.data.firebase.syncs.NewsFirebaseSync
 import com.guru.covid19tracker.models.News
 import kotlinx.android.synthetic.main.news_fragment.*
+import java.util.*
 
 class NewsFragment : Fragment(), NewsListAdapter.OnListItemTapped {
     lateinit var newsListAdapter: NewsListAdapter
@@ -46,8 +47,7 @@ class NewsFragment : Fragment(), NewsListAdapter.OnListItemTapped {
 
     private fun startNewsFirebaseSync() {
         if (newsFirebaseSync == null) {
-            newsFirebaseSync =
-                NewsFirebaseSync()
+            newsFirebaseSync = NewsFirebaseSync()
             list.clear()
             newsFirebaseSync?.startFutureFirebaseSync(object : FirestoreResponseCompletionHandler{
                 override fun onSuccess(result: Any?, observerType: FirebaseObserverType) {
@@ -55,6 +55,7 @@ class NewsFragment : Fragment(), NewsListAdapter.OnListItemTapped {
                     when (observerType) {
                         FirebaseObserverType.CHILD_ADDED -> {
                             list.add(news)
+                            list.reverse()
                             newsListAdapter.setData(list)
                           //  newsListAdapter.notifyDataSetChanged()
                          //   reloadData()

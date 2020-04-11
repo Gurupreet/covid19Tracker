@@ -60,6 +60,7 @@ class NewsListAdapter(val onitemTapped: OnListItemTapped): RecyclerView.Adapter<
                 itemView.apply {
                     username.text =  news.sender_name
                     message_text.text = news.message_text
+                    source.text = "Source: ${news.source}"
                     time_stamp.text = Utility.getTimeAgo(news.created_at, time_stamp.context)
                     Glide.with(context)
                         .load(news.avatar_url)

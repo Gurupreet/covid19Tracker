@@ -35,6 +35,17 @@
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/source"
+        android:textSize="@dimen/text_very_small"
+        android:textStyle="italic"
+        android:textColor="@color/grey"
+        android:layout_below="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/username">
+
+    </TextView>
 
     <TextView
         android:id="@+id/message_text"
@@ -44,7 +55,7 @@
         android:layout_marginTop="0dp"
         android:textSize="16sp"
         android:layout_marginBottom="5dp"
-        android:layout_below="@id/username"
+        android:layout_below="@id/source"
         android:layout_alignLeft="@id/username"
         />
 
