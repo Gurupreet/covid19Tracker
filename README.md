@@ -9,7 +9,7 @@ We are also double checking the info of data collected by "Covid19Org" as well. 
 You can also visit our supported website as well.
 
 - [Download App](https://drive.google.com/file/d/1kpf6DLf4dAA5m5L2Vt88KIfBuLXV2RK1/view?usp=sharing)
-- [Visit Website] (http://covid19tracker.us-west-2.elasticbeanstalk.com/)
+- [Visit Website](http://covid19tracker.us-west-2.elasticbeanstalk.com/)
 
 ## Screens
 <div>
